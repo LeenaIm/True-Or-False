@@ -121,8 +121,6 @@ rounds_played = 0
 choose_instruction = "True Or False: "
 user = check_rounds
 
-guess = ""
-
 # Ask user for # of rounds and check if valid, <enter> for infinite mode
 rounds = check_rounds ()
 
@@ -158,7 +156,9 @@ while end_game == "no":
     print (heading)
     print ()
 
- # True and false if else statements
+    # Generating true questions with correct answers
+    # If user enters true and answer is true, prints "well done!"
+    # If user enters anything other than true, prints "Sorry the correct answer was true"
 
     questions = ["true", "false"]
     random_item = random.choice(questions)
@@ -169,6 +169,9 @@ while end_game == "no":
         true_question = eval("{} == {}".format(actual_answer, question))
 
         true_response = input("{} = {} - True or False: ".format (question, actual_answer))
+
+        if true_response == 'xxx':
+            break
 
         if true_response == 'true' or true_response == 't': 
             print ()
@@ -186,6 +189,9 @@ while end_game == "no":
             
             false_response = input("{} = {} - True or False: ".format (question, num3))
 
+            if false_response == 'xxx':
+                break
+
             if false_response == 'false' or false_response == 'f': 
                 print ()
                 print("Well done! The answer was false :)")
@@ -194,17 +200,9 @@ while end_game == "no":
                 print ()
                 print ("Sorry, the correct answer was false :(")
 
-    # End game if exit code is typed
-    if guess == "xxx":
-        break
-
     rounds_played += 1
 
     if rounds_played == rounds:
         end_game = "yes"
 
     # **** rest of loop / game *****
-
-
-                
-        

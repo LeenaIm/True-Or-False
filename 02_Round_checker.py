@@ -1,3 +1,6 @@
+
+# checks user enter an integer that is more than 0
+
 def check_rounds ():
     while True:
         response = input ("How many questions would you like: ")
@@ -20,7 +23,7 @@ def check_rounds ():
 # Main routine goes here...
 
 rounds_played = 0
-choose_instruction = "Please choose how many questions"
+choose_instruction = "rewuyrwehuie"
 
 # Ask user for # of rounds, <enter> for infinite mode
 rounds = check_rounds ()
@@ -31,7 +34,7 @@ while end_game == "no":
     # Start of Game Play Loop
 
 
-    # Rounds Heading
+    # Rounds Heading (shows round for continuous or round / of total rounds for regular mode)
     print ()
     if rounds == "":
         heading = "Continiuous Mode: Round {}".format (rounds_played + 1)

@@ -158,41 +158,18 @@ while end_game == "no":
     print (heading)
     print ()
 
- # True and false if else statements
+    # Generating true questions with correct answers
+    # If user enters true and answer is true, prints "well done!"
+    # If user enters anything other than true, prints "Sorry the correct answer was true"
 
-    questions = ["true", "false"]
-    random_item = random.choice(questions)
+    true_response = input("{} = {} - True or False: ".format (question, actual_answer))
 
-    if random_item == "true":
-        # true question 
-        actual_answer = num1 + num2
-        true_question = eval("{} == {}".format(actual_answer, question))
-
-        true_response = input("{} = {} - True or False: ".format (question, actual_answer))
-
-        if true_response == 'true' or true_response == 't': 
-            print ()
-            print("Well done! The answer was true :)")
-
-        else:
-            print ("Sorry, the correct answer was true :(")
+    if true_response == 'true' or true_response == 't': 
+        print ()
+        print("Well done! The answer was true :)")
 
     else:
-
-        if random_item == "false":
-            # false question
-            false_answer = actual_answer + num3
-            false_question = eval("{} == {}".format(actual_answer, num3))
-            
-            false_response = input("{} = {} - True or False: ".format (question, num3))
-
-            if false_response == 'false' or false_response == 'f': 
-                print ()
-                print("Well done! The answer was false :)")
-
-            else:
-                print ()
-                print ("Sorry, the correct answer was false :(")
+        print ("Sorry, the correct answer was true :(")
 
     # End game if exit code is typed
     if guess == "xxx":
