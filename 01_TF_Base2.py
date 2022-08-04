@@ -178,6 +178,7 @@ while end_game == "no":
             print("Well done! The answer was true :)")
 
         else:
+            print ()
             print ("Sorry, the correct answer was true :(")
 
     else:
